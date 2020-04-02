@@ -4,42 +4,51 @@ using UnityEngine;
 
 public class PlayerMoveController : MonoBehaviour
 {
-    [SerializeField]
     public float walkSpeed = 1f;
-    private Vector2 move;
+    public float moveClickRadius = 1.5f;
+    private Vector2 movePos;
     private Vector2 lookDir;
-    private bool fire;
+    private bool doFire = false;
+    private bool doMove = false;
 
-    private Rigidbody2D rigidbody;
+    private Rigidbody2D rigidbody2d;
     void Start()
     {
-        move = Vector2.zero;
-        rigidbody = GetComponent<Rigidbody2D>();
+        movePos = Vector2.zero;
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        fire = false;
+        doFire = false;
+        doMove = false;
         //INPUTS
         lookDir = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButton(1)){
-            //need to move
-            move = lookDir;
+        if (Input.GetMouseButton(1))// right mouse button
+        {
+            if (Vector2.Distance(rigidbody2d.position, lookDir) > moveClickRadius)
+                movePos = lookDir;
+            else
+                movePos = rigidbody2d.position;
         }
-        if (Input.GetMouseButtonDown(0))
-            fire = true;
+        else
+            movePos = rigidbody2d.position;
+
+        if (Input.GetMouseButton(0))
+            doFire = true;
         lookAt(lookDir);
+        
     }
     private void FixedUpdate()
     {
-        rigidbody.MovePosition(Vector2.MoveTowards(rigidbody.position, move, walkSpeed * Time.fixedDeltaTime));
+        rigidbody2d.MovePosition(Vector2.MoveTowards(rigidbody2d.position, movePos, walkSpeed * Time.fixedDeltaTime));
+
     }
 
     private void lookAt(Vector2 dir)
     {
-        transform.right = dir - rigidbody.position;
+        transform.right = dir - rigidbody2d.position;
     }
-
 
 }
