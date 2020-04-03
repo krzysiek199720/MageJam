@@ -8,20 +8,20 @@ public class PlayerMoveController : MonoBehaviour
     public float moveClickRadius = 1.5f;
     private Vector2 movePos;
     private Vector2 lookDir;
-    private bool doFire = false;
     private bool doMove = false;
 
     private Rigidbody2D rigidbody2d;
+    private RangedWeapon weapon;
     void Start()
     {
         movePos = Vector2.zero;
         rigidbody2d = GetComponent<Rigidbody2D>();
+        weapon = GetComponentInChildren<RangedWeapon>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        doFire = false;
         doMove = false;
         //INPUTS
         lookDir = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -36,7 +36,7 @@ public class PlayerMoveController : MonoBehaviour
             movePos = rigidbody2d.position;
 
         if (Input.GetMouseButton(0))
-            doFire = true;
+            weapon.Attack();
         lookAt(lookDir);
         
     }

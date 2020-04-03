@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 1358789126717700971}
   - component: {fileID: 1358789126717700964}
   - component: {fileID: 1358789126717700965}
+  - component: {fileID: 569692554}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -175,3 +176,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 2.7
   moveClickRadius: 1.5
+--- !u!114 &569692554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358789126717700966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ace41736b7e58419c149aca6f2ddf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  health: 0
+  healthRegen: 1
+  regenTicksPerSecond: 1
