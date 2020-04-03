@@ -43,7 +43,6 @@ public class PlayerMoveController : MonoBehaviour
     private void FixedUpdate()
     {
         rigidbody2d.MovePosition(Vector2.MoveTowards(rigidbody2d.position, movePos, walkSpeed * Time.fixedDeltaTime));
-
     }
 
     private void lookAt(Vector2 dir)
