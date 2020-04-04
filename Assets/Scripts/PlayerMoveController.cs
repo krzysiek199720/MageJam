@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class PlayerMoveController : MonoBehaviour
 {
+    private static PlayerMoveController instance = null;
+    public static PlayerMoveController Instance { get { return instance; } }
+
     public float walkSpeed = 1f;
     public float moveClickRadius = 1.5f;
     private Vector2 movePos;
     private Vector2 lookDir;
 
     private Rigidbody2D rigidbody2d;
-    private RangedWeapon weapon;
+    public RangedWeapon weapon;
+    private void Awake()
+    {
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
+    }
+
     void Start()
     {
         movePos = Vector2.zero;

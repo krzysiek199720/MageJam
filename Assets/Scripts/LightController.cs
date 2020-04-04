@@ -13,6 +13,8 @@ public class LightController : MonoBehaviour
     public float minimumSize = 0.25f;
     public float maximumSize = 0.75f;
 
+    public float sizeMultiplier = 1f;
+
     private Rigidbody2D rigidbody2d;
 
     private Vector2 moveDir;
@@ -70,6 +72,12 @@ public class LightController : MonoBehaviour
     {
         float size = Mathf.Lerp(this.minimumSize, this.maximumSize, health / maxHealth);
         lightSettings.setSize(size);
+    }
+
+    public void setLightSizeMultiplier(float multiplier)
+    {
+        sizeMultiplier = multiplier;
+        lightSettings.setSize(lightSettings.transform.localScale.x * sizeMultiplier);
     }
 
     public void EnableLight()

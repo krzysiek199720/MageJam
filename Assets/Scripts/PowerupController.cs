@@ -179,49 +179,59 @@ public class PowerupController : MonoBehaviour
         mapUnveil.endAction.AddListener(powerupActions.EnableFog);
         this.powerups.Add(mapUnveil);
 
-        //// doubleDamage
-        //Powerup doubleDamage = new Powerup();
-        //doubleDamage.type = PowerupType.doubleDamage;
-        //doubleDamage.duration = 15f;
-        //doubleDamage.rarity = 1;
-        ////doubleDamage.startAction.AddListener();
-        ////doubleDamage.endAction.AddListener();
-        //this.powerups.Add(doubleDamage);
+        // doubleDamage
+        Powerup doubleDamage = new Powerup();
+        doubleDamage.type = PowerupType.doubleDamage;
+        doubleDamage.duration = 15f;
+        doubleDamage.rarity = 1;
+        doubleDamage.startAction = new UnityEngine.Events.UnityEvent();
+        doubleDamage.endAction = new UnityEngine.Events.UnityEvent();
+        doubleDamage.startAction.AddListener(powerupActions.DoubleDamage);
+        doubleDamage.endAction.AddListener(powerupActions.NormalDamage);
+        this.powerups.Add(doubleDamage);
 
-        //// unlimitedAmmo
-        //Powerup unlimitedAmmo = new Powerup();
-        //unlimitedAmmo.type = PowerupType.unlimitedAmmo;
-        //unlimitedAmmo.duration = 15f;
-        //unlimitedAmmo.rarity = 1;
-        ////unlimitedAmmo.startAction.AddListener();
-        ////unlimitedAmmo.endAction.AddListener();
-        //this.powerups.Add(unlimitedAmmo);
+        // unlimitedAmmo
+        Powerup unlimitedAmmo = new Powerup();
+        unlimitedAmmo.type = PowerupType.unlimitedAmmo;
+        unlimitedAmmo.duration = 15f;
+        unlimitedAmmo.rarity = 1;
+        unlimitedAmmo.startAction = new UnityEngine.Events.UnityEvent();
+        unlimitedAmmo.endAction = new UnityEngine.Events.UnityEvent();
+        unlimitedAmmo.startAction.AddListener(powerupActions.UnlimitedAmmo);
+        unlimitedAmmo.endAction.AddListener(powerupActions.NormalAmmo);
+        this.powerups.Add(unlimitedAmmo);
 
-        //// visionRange
-        //Powerup visionRange = new Powerup();
-        //visionRange.type = PowerupType.visionRange;
-        //visionRange.duration = 5f;
-        //visionRange.rarity = 1;
-        ////visionRange.startAction.AddListener();
-        ////visionRange.endAction.AddListener();
-        //this.powerups.Add(visionRange);
+        // visionRange
+        Powerup visionRange = new Powerup();
+        visionRange.type = PowerupType.visionRange;
+        visionRange.duration = 5f;
+        visionRange.rarity = 1;
+        visionRange.startAction = new UnityEngine.Events.UnityEvent();
+        visionRange.endAction = new UnityEngine.Events.UnityEvent();
+        visionRange.startAction.AddListener(powerupActions.VisionRangePlus);
+        visionRange.endAction.AddListener(powerupActions.VisionRangeNormal);
+        this.powerups.Add(visionRange);
 
-        //// healing
-        //Powerup healing = new Powerup();
-        //healing.type = PowerupType.healing;
-        //healing.duration = -1f;
-        //healing.rarity = 1;
-        ////healing.startAction.AddListener();
-        ////healing.endAction.AddListener();
-        //this.powerups.Add(healing);
+        // healing
+        Powerup healing = new Powerup();
+        healing.type = PowerupType.healing;
+        healing.duration = -1f; // no duration, immediate 
+        healing.rarity = 1;
+        healing.startAction = new UnityEngine.Events.UnityEvent();
+        healing.endAction = new UnityEngine.Events.UnityEvent();
+        healing.startAction.AddListener(powerupActions.Heal);
+        healing.endAction.AddListener(powerupActions.EmptyFunc);
+        this.powerups.Add(healing);
 
-        //// endurance
-        //Powerup endurance = new Powerup();
-        //endurance.type = PowerupType.endurance;
-        //endurance.duration = 5f;
-        //endurance.rarity = 1;
-        ////endurance.startAction.AddListener();
-        ////endurance.endAction.AddListener();
-        //this.powerups.Add(endurance);
+        // endurance
+        Powerup endurance = new Powerup();
+        endurance.type = PowerupType.endurance;
+        endurance.duration = 5f;
+        endurance.rarity = 1;
+        endurance.startAction = new UnityEngine.Events.UnityEvent();
+        endurance.endAction = new UnityEngine.Events.UnityEvent();
+        endurance.startAction.AddListener(powerupActions.Endurance);
+        endurance.endAction.AddListener(powerupActions.NormalEndurance);
+        this.powerups.Add(endurance);
     }
 }
