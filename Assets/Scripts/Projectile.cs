@@ -32,7 +32,6 @@ public class Projectile : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(rb2d.position);
         if ((rb2d.position - startPos).magnitude > maxDistance)
             DestroyProjectile();
         rb2d.position = rb2d.position + movementVector * speed * Time.fixedDeltaTime;

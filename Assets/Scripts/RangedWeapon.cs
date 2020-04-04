@@ -14,11 +14,20 @@ public class RangedWeapon : Weapon
     public float minimumShootAngle = -30f;
     public float maximumShootAngle = 30f;
 
+    public int magazineMaxSize = 5;
+    private int magazineSize = 5;
+
+    public float reloadStartTime = 2f;
+    public float reloadTime = 1f;
+    private float currentReloadTime = 0f;
+    private float lastShot = 0f;
+
     public Transform projectileSpawn;
 
     public GameObject projectilePrefab;
 
     public LayerMask ignoreLayer;
+
 
     // maybe well have a list of upgrades or something?
     public float cooldownLeft {get; protected set; }
@@ -41,16 +50,30 @@ public class RangedWeapon : Weapon
     protected override void manageCooldown()
     {
         cooldownLeft = Mathf.Max(cooldownLeft - Time.deltaTime, 0);
+        lastShot += Time.deltaTime;
+        if(this.currentReloadTime > 0)
+        {
+            currentReloadTime = Mathf.Max(currentReloadTime - Time.deltaTime, 0f);
+            if (!(this.currentReloadTime > 0))
+                reload();
+        }
+        else if (lastShot >= this.reloadStartTime)
+            if(this.magazineSize < this.magazineMaxSize)
+                startReload();
     }
 
     public override bool Attack()
     {
         if (cooldownLeft > 0)
             return false;
-
+        if (this.currentReloadTime > 0)
+            return false;
+        if (this.magazineSize < 1)
+            return false;
 
         //Do the attack
         cooldownLeft = attackCooldown;
+        lastShot = 0f;
         Vector2 moveMentVector = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
 
         for(int i = 0; i < numberOfBullets; ++i)
@@ -70,9 +93,38 @@ public class RangedWeapon : Weapon
             projectile.ignoreLayer = ignoreLayer;
         }
 
+        useBullet();
+        if (this.magazineSize < 1)
+            startReload();
+
         return true;
     }
 
+    private void useBullet()
+    {
+        this.magazineSize -= 1;
+        updateBulletUI();
+    }
+
+    private void startReload()
+    {
+        Debug.Log("Start reload");
+        this.currentReloadTime = this.reloadTime;
+        //reload anim
+    }
+
+    private void reload()
+    {
+        Debug.Log("End reload");
+        this.magazineSize = this.magazineMaxSize;
+        updateBulletUI();
+    }
+
+    private void updateBulletUI()
+    {
+        //change UI
+        // animations?
+    }
     protected Vector2 rotatedVector2(Vector2 v, float degrees)
     {
         Vector2 res = new Vector2();
