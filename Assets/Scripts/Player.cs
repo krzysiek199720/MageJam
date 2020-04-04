@@ -11,6 +11,10 @@ public class Player : MonoBehaviour, IDamageable, IKillable
 
     private float timeToRegen = 0f;
 
+    //DEBUG STUFF
+    private bool hurt = true;
+    //DEBUG STUFF END
+
     private void Start()
     {
         health = maxHealth;
@@ -23,6 +27,20 @@ public class Player : MonoBehaviour, IDamageable, IKillable
             timeToRegen = 1f / regenTicksPerSecond;
             changeHealth(healthRegen, false);
         }
+
+        //DEBUG STUFF
+        if (hurt)
+        {
+            if (this.health < 1f)
+                hurt = false;
+            else
+                changeHealth(0.1f, true);
+        }
+        else
+            if (this.health == this.maxHealth)
+                hurt = true;
+        
+        //DEBUG STUFF END
     }
 
     private void changeHealth(float amount, bool isDamage)
@@ -33,6 +51,7 @@ public class Player : MonoBehaviour, IDamageable, IKillable
 
         // Update health UI
         // Update light
+        LightController.Instance.setLightSize(this.health, this.maxHealth);
     }
     public void Damage(float damage)
     {

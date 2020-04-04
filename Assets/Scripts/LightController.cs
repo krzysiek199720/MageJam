@@ -4,16 +4,35 @@ using UnityEngine;
 
 public class LightController : MonoBehaviour
 {
+    private static LightController instance = null;
+    public static LightController Instance { get{return instance;} }
+
     public float walkSpeed = 2f;
+    public float minimumSize = 0.25f;
+    public float maximumSize = 0.75f;
+
     private Rigidbody2D rigidbody2d;
 
     private Vector2 moveDir;
     private LightSettings lightSettings;
+
+    private void Awake()
+    {
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
+    }
     void Start()
     {
         moveDir = Vector2.zero;
         rigidbody2d = GetComponent<Rigidbody2D>();
-        lightSettings = GetComponentInChildren<LightSettings>(); //not the best
+
+        lightSettings = GetComponentInChildren<LightSettings>();
+        lightSettings.setSizeInstant(maximumSize);
     }
 
     void Update()
@@ -32,8 +51,9 @@ public class LightController : MonoBehaviour
         rigidbody2d.MovePosition(Vector2.MoveTowards(rigidbody2d.position, rigidbody2d.position + moveDir, walkSpeed * Time.fixedDeltaTime));
     }
 
-    public void setLightSize(float lightSize)
+    public void setLightSize(float health, float maxHealth)
     {
-        lightSettings.setSize(lightSize);
+        float size = Mathf.Lerp(this.minimumSize, this.maximumSize, health / maxHealth);
+        lightSettings.setSize(size);
     }
 }
