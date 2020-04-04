@@ -8,7 +8,6 @@ public class PlayerMoveController : MonoBehaviour
     public float moveClickRadius = 1.5f;
     private Vector2 movePos;
     private Vector2 lookDir;
-    private bool doMove = false;
 
     private Rigidbody2D rigidbody2d;
     private RangedWeapon weapon;
@@ -22,7 +21,6 @@ public class PlayerMoveController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        doMove = false;
         //INPUTS
         lookDir = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButton(1))// right mouse button

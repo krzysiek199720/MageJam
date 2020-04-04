@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IDamageable
 {
-    public void Damage(float damage);
-    public void Knockback(float force, Vector2 direction);
+    void Damage(float damage);
+    void Knockback(float force, Vector2 direction);
 }

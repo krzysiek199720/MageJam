@@ -9,6 +9,11 @@ public class RangedWeapon : Weapon
     public float projectileSpeedMultiplier = 1f;
     public float projectileDistanceToAdd = 1f;
 
+    public int numberOfBullets = 5;
+
+    public float minimumShootAngle = -30f;
+    public float maximumShootAngle = 30f;
+
     public Transform projectileSpawn;
 
     public GameObject projectilePrefab;
@@ -46,22 +51,37 @@ public class RangedWeapon : Weapon
 
         //Do the attack
         cooldownLeft = attackCooldown;
-
-        GameObject projectileGO = Instantiate(projectilePrefab, projectileSpawn.position, projectileSpawn.rotation);
-        projectileGO.transform.localScale = new Vector3(
-            this.transform.localScale.x * projectileGO.transform.localScale.x
-            , this.transform.localScale.y * projectileGO.transform.localScale.y
-            , this.transform.localScale.z * projectileGO.transform.localScale.z
-            );
-        Projectile projectile = projectileGO.GetComponent<Projectile>();
-
         Vector2 moveMentVector = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
 
-        projectile.setMovementVector(moveMentVector);
-        projectile.addStats(damage, knockbackForce, pierceAdd, projectileSpeedMultiplier, projectileDistanceToAdd);
-        projectile.enemyLayer = enemyLayer;
-        projectile.ignoreLayer = ignoreLayer;
+        for(int i = 0; i < numberOfBullets; ++i)
+        {
+            GameObject projectileGO = Instantiate(projectilePrefab, projectileSpawn.position, projectileSpawn.rotation);
+            projectileGO.transform.localScale = new Vector3(
+                this.transform.localScale.x * projectileGO.transform.localScale.x
+                , this.transform.localScale.y * projectileGO.transform.localScale.y
+                , this.transform.localScale.z * projectileGO.transform.localScale.z
+                );
+            Projectile projectile = projectileGO.GetComponent<Projectile>();
+
+
+            projectile.setMovementVector(rotatedVector2(moveMentVector, Random.Range(minimumShootAngle, maximumShootAngle)));
+            projectile.addStats(damage, knockbackForce, pierceAdd, projectileSpeedMultiplier, projectileDistanceToAdd);
+            projectile.enemyLayer = enemyLayer;
+            projectile.ignoreLayer = ignoreLayer;
+        }
 
         return true;
+    }
+
+    protected Vector2 rotatedVector2(Vector2 v, float degrees)
+    {
+        Vector2 res = new Vector2();
+
+        float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
+        float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
+
+        res.x = (cos * v.x) - (sin * v.y);
+        res.y = (sin * v.x) + (cos * v.y);
+        return res;
     }
 }
