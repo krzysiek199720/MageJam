@@ -44,6 +44,11 @@ public class Player : MonoBehaviour, IDamageable, IKillable
             Kill();
     }
 
+    public void Knockback(float force, Vector2 direction)
+    {
+        //Don tknow if player should be knocked back
+    }
+
     public void Kill()
     {
         Debug.Log("You've been killed");

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float damage = 1f;
+    public float knockbackForce = 1f;
     public int enemiesToPierce = 1;
     public float speed = 8f;
     public float maxDistance = 5f;
@@ -38,12 +39,13 @@ public class Projectile : MonoBehaviour
     }
 
 
-    public void addStats(float damage, int pierce = 0, float speed = 1f, float distance = 0f)
+    public void addStats(float damage, float knockback = 1f, int pierce = 0, float speed = 1f, float distance = 0f)
     {
         this.damage += damage;
         this.enemiesToPierce += pierce;
         this.maxDistance += distance;
 
+        this.knockbackForce *= knockback;
         this.speed *= speed;
     }
 
@@ -74,6 +76,7 @@ public class Projectile : MonoBehaviour
             return;
         }
         enemy.Damage(damage);
+        enemy.Knockback(knockbackForce, (collision.transform.position - this.transform.position).normalized);
 
         if (--enemiesToPierce == 0)
         {

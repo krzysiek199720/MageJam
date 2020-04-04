@@ -58,7 +58,7 @@ public class RangedWeapon : Weapon
         Vector2 moveMentVector = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
 
         projectile.setMovementVector(moveMentVector);
-        projectile.addStats(damage, pierceAdd, projectileSpeedMultiplier, projectileDistanceToAdd);
+        projectile.addStats(damage, knockbackForce, pierceAdd, projectileSpeedMultiplier, projectileDistanceToAdd);
         projectile.enemyLayer = enemyLayer;
         projectile.ignoreLayer = ignoreLayer;
 

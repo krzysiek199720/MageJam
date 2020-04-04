@@ -7,6 +7,7 @@ public abstract class Weapon : MonoBehaviour, IAttack
     public LayerMask enemyLayer;
 
     public float damage = 2f;
+    public float knockbackForce = 1f;
     public float attackCooldown = 0.25f;
 
     private void Update()
