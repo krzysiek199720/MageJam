@@ -186,5 +186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 2
+  inertiaTime: 0.2
   minimumSize: 0.25
   maximumSize: 0.75

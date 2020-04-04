@@ -8,6 +8,8 @@ public class LightController : MonoBehaviour
     public static LightController Instance { get{return instance;} }
 
     public float walkSpeed = 2f;
+    public float inertiaTime = 0.2f;
+    private float currentInertiaTime = 0f;
     public float minimumSize = 0.25f;
     public float maximumSize = 0.75f;
 
@@ -15,6 +17,8 @@ public class LightController : MonoBehaviour
 
     private Vector2 moveDir;
     private LightSettings lightSettings;
+
+    private Vector2 zeroVector = Vector2.zero;
 
     private void Awake()
     {
@@ -44,11 +48,22 @@ public class LightController : MonoBehaviour
         if (Input.GetKey(KeyCode.A)) move.x = -1;
         if (Input.GetKey(KeyCode.D)) move.x = 1;
 
+        if (move.Equals(zeroVector))
+        {
+            this.currentInertiaTime += Time.deltaTime;
+            if (this.currentInertiaTime < this.inertiaTime)
+                return;
+        }
+        else
+            this.currentInertiaTime = 0f;
+        
+
         moveDir = move.normalized;
     }
     private void FixedUpdate()
     {
-        rigidbody2d.MovePosition(Vector2.MoveTowards(rigidbody2d.position, rigidbody2d.position + moveDir, walkSpeed * Time.fixedDeltaTime));
+        float inertiaInfluence = 1 - Mathf.Lerp(0, 1, this.currentInertiaTime / this.inertiaTime);
+        rigidbody2d.MovePosition(Vector2.MoveTowards(rigidbody2d.position, rigidbody2d.position + moveDir, walkSpeed * inertiaInfluence * Time.fixedDeltaTime));
     }
 
     public void setLightSize(float health, float maxHealth)
