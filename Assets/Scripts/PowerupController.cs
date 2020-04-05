@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerupController : MonoBehaviour
 {
     public GameObject powerupPrefab;
-    public Vector3[] spawnPoints;
+    public List<Vector3> spawnPoints = new List<Vector3>();
 
     [HideInInspector]
     public List<Powerup> powerups;
@@ -19,6 +19,29 @@ public class PowerupController : MonoBehaviour
     private PowerupActions powerupActions;
 
     private Dictionary<PowerupType, Sprite> powerupSprites = new Dictionary<PowerupType, Sprite>();
+
+    public int maxPowerupsOnMap = 5;
+    private int powerupCount = 0;
+
+    public float powerupSpawnInterval = 5f;
+    private float lastPowerupSpawn = 0f;
+
+    [HideInInspector]
+    public List<PowerupBehaviour> powerupsOnMap = new List<PowerupBehaviour>();
+
+    void Update()
+    {
+        HandleGlobalPowerups();
+        lastPowerupSpawn += Time.deltaTime;
+        if (lastPowerupSpawn >= powerupSpawnInterval)
+        {
+            lastPowerupSpawn = 0f;
+            if (powerupCount < maxPowerupsOnMap)
+            {
+                SpawnRandomPowerup();
+            }
+        }
+    }
 
     private void HandleGlobalPowerups()
     {
@@ -72,6 +95,7 @@ public class PowerupController : MonoBehaviour
         }
 
         keys = new List<PowerupType>(activePowerups.Keys);
+    
     }
 
     public void ClearActivePowerups()
@@ -83,17 +107,13 @@ public class PowerupController : MonoBehaviour
         activePowerups.Clear();
     }
 
-    void Update()
-    {
-        HandleGlobalPowerups();
-    }
 
     public GameObject SpawnPowerup(Powerup powerup, Vector3 position)
     {
         if (powerup == null)
             return null;
-        if (position == null)
-            position = Vector3.zero;
+        if (position.Equals(Vector3.zero))
+            return null;
 
         GameObject powerupGameObject = Instantiate(powerupPrefab);
 
@@ -113,6 +133,11 @@ public class PowerupController : MonoBehaviour
 
         powerupGameObject.transform.position = position;
 
+        powerupsOnMap.Add(powerupBehaviour);
+        powerupCount++;
+
+        lastPowerupSpawn = 0f;
+
         return powerupGameObject;
     }
 
@@ -123,9 +148,30 @@ public class PowerupController : MonoBehaviour
 
     public Vector3 GetRandomSpawnPosition()
     {
-        if(spawnPoints.Length > 0)
-            return spawnPoints[Random.Range(0, spawnPoints.Length - 1)];
+        if (spawnPoints.Count > 0)
+        {
+            List<Vector3> validSpots = getValidSpawns();
+            Debug.Log(validSpots.Count);
+            if(validSpots.Count > 0)
+            {
+                int index = Random.Range(0, validSpots.Count);
+                return validSpots[index];
+            }
+        }
         return Vector3.zero;
+    }
+
+    private List<Vector3> getValidSpawns()
+    {
+        List<Vector3> res = new List<Vector3>();
+        List<Vector3> usedSpawns = new List<Vector3>();
+        foreach(PowerupBehaviour pb in powerupsOnMap)
+        {
+            usedSpawns.Add(pb.transform.position);
+        }
+        spawnPoints.ForEach(x => res.Add(x));
+        res.RemoveAll(x => usedSpawns.Contains(x));
+        return res;
     }
 
     public Powerup getRandomPowerup()
@@ -148,6 +194,11 @@ public class PowerupController : MonoBehaviour
         return res;
     }
 
+    public void powerupPickedup(PowerupBehaviour pb)
+    {
+        powerupsOnMap.Remove(pb);
+        powerupCount--;
+    }
     private void Start()
     {
         powerupActions = new PowerupActions();

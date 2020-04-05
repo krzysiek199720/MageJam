@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerupActions
 {
-    RangedWeapon rangedWeapon = PlayerMoveController.Instance.weapon;
+    RangedWeapon rangedWeapon = RangedWeapon.Instance;
     LightController lightController = LightController.Instance;
     Player player = Player.Instance;
 

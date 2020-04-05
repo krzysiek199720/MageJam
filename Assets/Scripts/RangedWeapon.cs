@@ -5,6 +5,20 @@ using UnityEngine;
 
 public class RangedWeapon : Weapon
 {
+    private static RangedWeapon instance = null;
+    public static RangedWeapon Instance { get { return instance; } }
+
+    private void Awake()
+    {
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
+    }
+
     public int pierceAdd = 0;
     public float projectileSpeedMultiplier = 1f;
     public float projectileDistanceToAdd = 1f;
