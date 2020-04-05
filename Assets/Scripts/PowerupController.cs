@@ -18,6 +18,8 @@ public class PowerupController : MonoBehaviour
 
     private PowerupActions powerupActions;
 
+    private Dictionary<PowerupType, Sprite> powerupSprites = new Dictionary<PowerupType, Sprite>();
+
     private void HandleGlobalPowerups()
     {
         bool changed = false;
@@ -101,6 +103,14 @@ public class PowerupController : MonoBehaviour
 
         powerupBehaviour.SetPowerup(powerup);
 
+        if (this.powerupSprites.ContainsKey(powerup.type))
+        {
+            SpriteRenderer sr = powerupGameObject.GetComponentInChildren<SpriteRenderer>();
+            sr.sprite = this.powerupSprites[powerup.type];
+        }
+        else
+            Debug.LogError("No sprite found for: " + powerup.type);
+
         powerupGameObject.transform.position = position;
 
         return powerupGameObject;
@@ -178,6 +188,9 @@ public class PowerupController : MonoBehaviour
         mapUnveil.startAction.AddListener(powerupActions.DisableFog);
         mapUnveil.endAction.AddListener(powerupActions.EnableFog);
         this.powerups.Add(mapUnveil);
+        Sprite mapUnveilSprite = Resources.Load<Sprite>("Sprites/Powerups/TmpSpritePowerup");
+        this.powerupSprites.Add(mapUnveil.type, mapUnveilSprite);
+
 
         // doubleDamage
         Powerup doubleDamage = new Powerup();
