@@ -150,6 +150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fog
       objectReference: {fileID: 0}
+    - target: {fileID: 2070981978025973579, guid: 7fa749478ea423141a7e9da4aba333e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2070981978025973578, guid: 7fa749478ea423141a7e9da4aba333e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -383,6 +388,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightThingy
       objectReference: {fileID: 0}
+    - target: {fileID: 8731881979796641488, guid: 340bc455b70b2e44b98bd67070294205,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8731881979796641489, guid: 340bc455b70b2e44b98bd67070294205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -586,5 +596,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
+        type: 3}
+      propertyPath: waves.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
+        type: 3}
+      propertyPath: waves.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: eaa719852dbb8c24aa1b6502be6cad31,
+        type: 2}
+    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
+        type: 3}
+      propertyPath: waves.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a0e0a178348747747b6a9091258e2679,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6, type: 3}

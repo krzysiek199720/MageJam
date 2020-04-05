@@ -10,8 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84a527b40394374469fde6b7e574d5c4, type: 3}
-  m_Name: Wave
+  m_Name: Wave_1
   m_EditorClassIdentifier: 
-  prefabName: 
-  enemies: []
-  spawnPoints: []
+  enemies:
+  - name: magik
+    count: 2
+    spawnInterval: 5
+    timeSinceSpawn: 5.0424924
+    spawned: 0
+    pointsPerKill: 2
+    prefab: {fileID: 9154443220201714673, guid: 67f948fd63d3b174bb759817903333c2,
+      type: 3}
+  spawnPoints:
+  - {x: 0, y: 1, z: 0}

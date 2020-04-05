@@ -149,7 +149,6 @@ public class PowerupController : MonoBehaviour
         if (spawnPoints.Count > 0)
         {
             List<Vector3> validSpots = getValidSpawns();
-            Debug.Log(validSpots.Count);
             if(validSpots.Count > 0)
             {
                 int index = Random.Range(0, validSpots.Count);

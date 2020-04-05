@@ -12,6 +12,12 @@ public class WaveElement
     [SerializeField]
     public int count;
 
+    [SerializeField]
+    public float spawnInterval = 1f;
+
+    [HideInInspector]
+    public float timeSinceSpawn = 0f;
+
     [HideInInspector]
     public int spawned = 0;
 

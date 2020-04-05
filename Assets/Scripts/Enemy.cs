@@ -7,6 +7,11 @@ public class Enemy : MonoBehaviour
     public float enemySpeed = 1f;
     public float stoppingDis = 1f;
 
+    [HideInInspector]
+    public string enemyName;
+    [HideInInspector]
+    public int pointsPerKill;
+
     private Animator anim;
     private Transform target;
 

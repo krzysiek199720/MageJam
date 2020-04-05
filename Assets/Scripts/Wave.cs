@@ -5,30 +5,30 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Wave", menuName = "Wave", order = 1)]
 public class Wave : ScriptableObject
 {
-    public string prefabName;
-
     public List<WaveElement> enemies;
 
     public List<Vector3> spawnPoints;
 
-    [HideInInspector]
-    private List<WaveElement> validEnemies = null;
-
-    public WaveElement GetEnemyToSpawn()
+    public List<WaveElement> GetEnemiesToSpawn(float addTime)
     {
-        if (validEnemies == null)
+        List<WaveElement> res = new List<WaveElement>();
+        bool isWaveOver = true;
+        foreach(WaveElement we in enemies)
         {
-            validEnemies = new List<WaveElement>();
-            foreach (WaveElement we in enemies)
-            {
-                if (we.spawned < we.count)
-                    validEnemies.Add(we);
-            }
+            if (we.count <= we.spawned)
+                continue;
+            isWaveOver = false;
+            we.timeSinceSpawn += addTime;
+            if (we.timeSinceSpawn < we.spawnInterval)
+                continue;
+            
+            res.Add(we);
+            we.spawned++;
+            we.timeSinceSpawn = 0f;
         }
-        WaveElement res = validEnemies[Random.Range(0, validEnemies.Count)];
-        res.spawned++;
-        if (res.spawned >= res.count)
-            validEnemies.Remove(res);
+
+        if (isWaveOver)
+            return null;
 
          return res;
     }
@@ -36,5 +36,15 @@ public class Wave : ScriptableObject
     public Vector3 GetSpawnPoint()
     {
         return spawnPoints[Random.Range(0, spawnPoints.Count)];
+    }
+
+    public void ResetWave()
+    {
+        foreach(WaveElement we in enemies)
+        {
+            we.spawned = 0;
+            we.timeSinceSpawn = 0f;
+            we.timeSinceSpawn = we.spawnInterval + 1f;
+        }
     }
 }
