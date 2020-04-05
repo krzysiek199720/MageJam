@@ -13,6 +13,8 @@ public class LightController : MonoBehaviour
     public float minimumSize = 0.25f;
     public float maximumSize = 0.75f;
 
+    public float sizeMultiplier = 1f;
+
     private Rigidbody2D rigidbody2d;
 
     private Vector2 moveDir;
@@ -72,6 +74,15 @@ public class LightController : MonoBehaviour
         lightSettings.setSize(size);
     }
 
+<<<<<<< HEAD
+=======
+    public void setLightSizeMultiplier(float multiplier)
+    {
+        sizeMultiplier = multiplier;
+        lightSettings.setSize(lightSettings.transform.localScale.x * sizeMultiplier);
+    }
+
+>>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
     public void EnableLight()
     {
         lightSettings.gameObject.SetActive(true);

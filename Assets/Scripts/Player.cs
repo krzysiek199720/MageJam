@@ -4,16 +4,32 @@ using UnityEngine;
 
 public class Player : MonoBehaviour, IDamageable, IKillable
 {
+    private static Player instance = null;
+    public static Player Instance { get { return instance; } }
+
     public float maxHealth = 10f;
     public float health;
     public float healthRegen = 1f;
     public int regenTicksPerSecond = 1;
+
+    public float damageReceivedMultiplier = 1f;
 
     private float timeToRegen = 0f;
 
     //DEBUG STUFF
     private bool hurt = true;
     //DEBUG STUFF END
+
+    private void Awake()
+    {
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
+    }
 
     private void Start()
     {
@@ -53,9 +69,15 @@ public class Player : MonoBehaviour, IDamageable, IKillable
         // Update light
         LightController.Instance.setLightSize(this.health, this.maxHealth);
     }
+
+    public void HealMax()
+    {
+        changeHealth(maxHealth-health, false);
+    }
+
     public void Damage(float damage)
     {
-        damage = Mathf.Abs(damage);
+        damage = Mathf.Abs(damage * damageReceivedMultiplier);
         changeHealth(Mathf.Max(this.health - damage, 0f), true);
                 
         // if killed

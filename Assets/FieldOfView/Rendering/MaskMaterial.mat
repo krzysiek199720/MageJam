@@ -90,9 +90,12 @@ Material:
     - _Parallax: 0.02
     - _Radius: 1.46
 <<<<<<< HEAD
+<<<<<<< HEAD
     - _RadiusAlpha: 0.9
     - _RadiusColor: 1.12
 =======
+=======
+>>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
     - _RadiusAlpha: 1
     - _RadiusColor: 1
 >>>>>>> 54d5ae2c6243c6bb40b9379871f8985a280cfe36

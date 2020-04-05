@@ -5,6 +5,20 @@ using UnityEngine;
 
 public class RangedWeapon : Weapon
 {
+    private static RangedWeapon instance = null;
+    public static RangedWeapon Instance { get { return instance; } }
+
+    private void Awake()
+    {
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
+    }
+
     public int pierceAdd = 0;
     public float projectileSpeedMultiplier = 1f;
     public float projectileDistanceToAdd = 1f;
@@ -15,12 +29,14 @@ public class RangedWeapon : Weapon
     public float maximumShootAngle = 30f;
 
     public int magazineMaxSize = 5;
-    private int magazineSize = 5;
+    public int magazineSize = 5;
 
     public float reloadStartTime = 2f;
     public float reloadTime = 1f;
     private float currentReloadTime = 0f;
     private float lastShot = 0f;
+
+    public float damageMultiplier = 1f;
 
     public Transform projectileSpawn;
 
@@ -88,7 +104,7 @@ public class RangedWeapon : Weapon
 
 
             projectile.setMovementVector(rotatedVector2(moveMentVector, Random.Range(minimumShootAngle, maximumShootAngle)));
-            projectile.addStats(damage, knockbackForce, pierceAdd, projectileSpeedMultiplier, projectileDistanceToAdd);
+            projectile.addStats(damage * damageMultiplier, knockbackForce, pierceAdd, projectileSpeedMultiplier, projectileDistanceToAdd);
             projectile.enemyLayer = enemyLayer;
             projectile.ignoreLayer = ignoreLayer;
         }
