@@ -44,12 +44,13 @@ public class RangedWeapon : Weapon
 
     public LayerMask ignoreLayer;
 
-
+    private Animator animator;
     // maybe well have a list of upgrades or something?
     public float cooldownLeft {get; protected set; }
 
     void Start()
     {
+        animator = GetComponentInParent<Animator>();
 
         if (projectilePrefab == null)
         {
@@ -124,15 +125,16 @@ public class RangedWeapon : Weapon
 
     private void startReload()
     {
-        Debug.Log("Start reload");
         this.currentReloadTime = this.reloadTime;
         //reload anim
+        animator.SetBool("isReloading", true);
     }
 
     private void reload()
     {
-        Debug.Log("End reload");
         this.magazineSize = this.magazineMaxSize;
+
+        animator.SetBool("isReloading", false);
         updateBulletUI();
     }
 
@@ -140,6 +142,7 @@ public class RangedWeapon : Weapon
     {
         //change UI
         // animations?
+
     }
     protected Vector2 rotatedVector2(Vector2 v, float degrees)
     {

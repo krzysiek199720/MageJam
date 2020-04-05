@@ -1,0 +1,907 @@
+fileFormatVersion: 2
+guid: e01c3c13592c7ae418c54149614dddbb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2673760731586688544
+    second: FatFuck_walk_0
+  - first:
+      213: -25502352649420572
+    second: FatFuck_walk_1
+  - first:
+      213: 1171131778203801953
+    second: FatFuck_walk_2
+  - first:
+      213: 1918041166610352210
+    second: FatFuck_walk_3
+  - first:
+      213: 4817447987567395644
+    second: FatFuck_walk_4
+  - first:
+      213: 8488487684468545932
+    second: FatFuck_walk_5
+  - first:
+      213: -6332897010090751127
+    second: FatFuck_walk_6
+  - first:
+      213: 8116810303618638009
+    second: FatFuck_walk_7
+  - first:
+      213: 7880685467367191162
+    second: FatFuck_walk_8
+  - first:
+      213: -3562353742091251619
+    second: FatFuck_walk_9
+  - first:
+      213: -1428730955008680708
+    second: FatFuck_walk_10
+  - first:
+      213: 3015988812708122769
+    second: FatFuck_walk_11
+  - first:
+      213: -2364423643725548715
+    second: FatFuck_walk_12
+  - first:
+      213: 8195392820979709087
+    second: FatFuck_walk_13
+  - first:
+      213: 9193722461933167134
+    second: FatFuck_walk_14
+  - first:
+      213: -689572731741507789
+    second: FatFuck_walk_15
+  - first:
+      213: -125960616607278589
+    second: FatFuck_walk_16
+  - first:
+      213: -8657288413644353823
+    second: FatFuck_walk_17
+  - first:
+      213: -2113762028001306002
+    second: FatFuck_walk_18
+  - first:
+      213: 3246898274811081792
+    second: FatFuck_walk_19
+  - first:
+      213: 8646497277719328233
+    second: FatFuck_walk_20
+  - first:
+      213: -1186221971757729481
+    second: FatFuck_walk_21
+  - first:
+      213: 3447467371531178999
+    second: FatFuck_walk_22
+  - first:
+      213: -1590723435706690136
+    second: FatFuck_walk_23
+  - first:
+      213: 6720620177013198
+    second: FatFuck_walk_24
+  - first:
+      213: 7673974161745465650
+    second: FatFuck_walk_25
+  - first:
+      213: -2605880706866746801
+    second: FatFuck_walk_26
+  - first:
+      213: 8549926399763415215
+    second: FatFuck_walk_27
+  - first:
+      213: -7382173529515194240
+    second: FatFuck_walk_28
+  - first:
+      213: 7283807984655074458
+    second: FatFuck_walk_29
+  - first:
+      213: 1648579946799402696
+    second: FatFuck_walk_30
+  - first:
+      213: -4720237289733684731
+    second: FatFuck_walk_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 35
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FatFuck_walk_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 326
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a57b591a4054784b827727ffee717b2
+      internalID: -2673760731586688544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 326
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb347c5a4aa79a418acca789633b72a
+      internalID: -25502352649420572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 326
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a8e31c4152f3c4eacde0dff360a305
+      internalID: 1171131778203801953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_3
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 326
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff36f7a3440cdb14e87787446b218314
+      internalID: 1918041166610352210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_4
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 326
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2db7bcb50032f7409bfb75a6efee2c0
+      internalID: 4817447987567395644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 326
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db61c1b0bf1857145a2640468ce5ef89
+      internalID: 8488487684468545932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 262
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2c015ded324014683a61f7c1fcf996
+      internalID: -6332897010090751127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_7
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 262
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb31345aa43b054fac16860b78de4ed
+      internalID: 8116810303618638009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_8
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 262
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d265291902fe5354aa6fc2cd87bd53fb
+      internalID: 7880685467367191162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_9
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 262
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba71f84f385b0140af21a06920c58c1
+      internalID: -3562353742091251619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_10
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 262
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ceb2d715e3e3049b55c24f155d87d3
+      internalID: -1428730955008680708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_11
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 262
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b80c49ecb56a543a6b49ff9ba5d935
+      internalID: 3015988812708122769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 198
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06901311b075f104eae79871edfd90ac
+      internalID: -2364423643725548715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 198
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e5862740553234892dd2bc9c212f2c
+      internalID: 8195392820979709087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_14
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 198
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031418ae6f6745740a19eccae7610f25
+      internalID: 9193722461933167134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_15
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 198
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75a9822c0aa8b74bbfc87db2e326986
+      internalID: -689572731741507789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_16
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 198
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbe76521bc459e48a8018d273b69fb5
+      internalID: -125960616607278589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_17
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 198
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e641668612a694ab7837984343ab85
+      internalID: -8657288413644353823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_18
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 134
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238fb68b3ce817c44ab66fadfcfd55b8
+      internalID: -2113762028001306002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_19
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 134
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71e2bfcaf4867e4f88c0c6918fc4083
+      internalID: 3246898274811081792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_20
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 134
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016905c1dbd1a14458fcb26e2f8c3426
+      internalID: 8646497277719328233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_21
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 134
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a5b4dd419673641af8e106a19ea655
+      internalID: -1186221971757729481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_22
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 134
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f273b143990a54faa2b0997f03ef76
+      internalID: 3447467371531178999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_23
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 134
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e1dd49d09c4b443a6eb02345a51469
+      internalID: -1590723435706690136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_24
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 70
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2fba02c1d97311488039e9cf8a67d38
+      internalID: 6720620177013198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_25
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 70
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579c4d446939aeb459669087dd913fe8
+      internalID: 7673974161745465650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_26
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 70
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0137a03748cd51844a697a0599f45231
+      internalID: -2605880706866746801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_27
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 70
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8513594aeebe6544bca170cef8fc5e5
+      internalID: 8549926399763415215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_28
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 70
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef94e8c920d28340b4cdd1be9dfac80
+      internalID: -7382173529515194240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_29
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 70
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b143c991b7da1a84c8ac26d9ef3f737a
+      internalID: 7283807984655074458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 6
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cf2ccb24965e644acf0e36e2b65827
+      internalID: 1648579946799402696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FatFuck_walk_31
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 6
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d516af7babff943a2e282206a899b0
+      internalID: -4720237289733684731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

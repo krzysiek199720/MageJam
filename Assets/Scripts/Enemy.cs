@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     private Animator anim;
     private Transform target;
-    // Start is called before the first frame update
+
     void Start()
     {
         anim = GetComponent<Animator>();
