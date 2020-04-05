@@ -71,4 +71,13 @@ public class LightController : MonoBehaviour
         float size = Mathf.Lerp(this.minimumSize, this.maximumSize, health / maxHealth);
         lightSettings.setSize(size);
     }
+
+    public void EnableLight()
+    {
+        lightSettings.gameObject.SetActive(true);
+    }
+    public void DisableLight()
+    {
+        lightSettings.gameObject.SetActive(false);
+    }
 }

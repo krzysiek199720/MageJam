@@ -74,6 +74,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - PixelSnap: 0
+    - Vector1_4E1BC505: 0
     - Vector1_D2837B7B: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -88,8 +89,13 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Radius: 1.46
+<<<<<<< HEAD
     - _RadiusAlpha: 0.9
+    - _RadiusColor: 1.12
+=======
+    - _RadiusAlpha: 1
     - _RadiusColor: 1
+>>>>>>> 54d5ae2c6243c6bb40b9379871f8985a280cfe36
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
