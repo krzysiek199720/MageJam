@@ -5,11 +5,7 @@ using UnityEngine;
 public class PowerupController : MonoBehaviour
 {
     public GameObject powerupPrefab;
-<<<<<<< HEAD
-    public Vector3[] spawnPoints;
-=======
     public List<Vector3> spawnPoints = new List<Vector3>();
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
 
     [HideInInspector]
     public List<Powerup> powerups;
@@ -22,8 +18,6 @@ public class PowerupController : MonoBehaviour
 
     private PowerupActions powerupActions;
 
-<<<<<<< HEAD
-=======
     private Dictionary<PowerupType, Sprite> powerupSprites = new Dictionary<PowerupType, Sprite>();
 
     public int maxPowerupsOnMap = 5;
@@ -49,7 +43,6 @@ public class PowerupController : MonoBehaviour
         }
     }
 
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
     private void HandleGlobalPowerups()
     {
         bool changed = false;
@@ -102,10 +95,6 @@ public class PowerupController : MonoBehaviour
         }
 
         keys = new List<PowerupType>(activePowerups.Keys);
-<<<<<<< HEAD
-=======
-    
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
     }
 
     public void ClearActivePowerups()
@@ -117,25 +106,12 @@ public class PowerupController : MonoBehaviour
         activePowerups.Clear();
     }
 
-<<<<<<< HEAD
-    void Update()
-    {
-        HandleGlobalPowerups();
-    }
-=======
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
-
     public GameObject SpawnPowerup(Powerup powerup, Vector3 position)
     {
         if (powerup == null)
             return null;
-<<<<<<< HEAD
-        if (position == null)
-            position = Vector3.zero;
-=======
         if (position.Equals(Vector3.zero))
             return null;
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
 
         GameObject powerupGameObject = Instantiate(powerupPrefab);
 
@@ -145,10 +121,6 @@ public class PowerupController : MonoBehaviour
 
         powerupBehaviour.SetPowerup(powerup);
 
-<<<<<<< HEAD
-        powerupGameObject.transform.position = position;
-
-=======
         if (this.powerupSprites.ContainsKey(powerup.type))
         {
             SpriteRenderer sr = powerupGameObject.GetComponentInChildren<SpriteRenderer>();
@@ -164,7 +136,6 @@ public class PowerupController : MonoBehaviour
 
         lastPowerupSpawn = 0f;
 
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
         return powerupGameObject;
     }
 
@@ -175,13 +146,6 @@ public class PowerupController : MonoBehaviour
 
     public Vector3 GetRandomSpawnPosition()
     {
-<<<<<<< HEAD
-        if(spawnPoints.Length > 0)
-            return spawnPoints[Random.Range(0, spawnPoints.Length - 1)];
-        return Vector3.zero;
-    }
-
-=======
         if (spawnPoints.Count > 0)
         {
             List<Vector3> validSpots = getValidSpawns();
@@ -208,7 +172,6 @@ public class PowerupController : MonoBehaviour
         return res;
     }
 
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
     public Powerup getRandomPowerup()
     {
         Powerup res = null;
@@ -229,14 +192,12 @@ public class PowerupController : MonoBehaviour
         return res;
     }
 
-<<<<<<< HEAD
-=======
     public void powerupPickedup(PowerupBehaviour pb)
     {
         powerupsOnMap.Remove(pb);
         powerupCount--;
     }
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
+
     private void Start()
     {
         powerupActions = new PowerupActions();
@@ -277,53 +238,7 @@ public class PowerupController : MonoBehaviour
         mapUnveil.startAction.AddListener(powerupActions.DisableFog);
         mapUnveil.endAction.AddListener(powerupActions.EnableFog);
         this.powerups.Add(mapUnveil);
-<<<<<<< HEAD
 
-        //// doubleDamage
-        //Powerup doubleDamage = new Powerup();
-        //doubleDamage.type = PowerupType.doubleDamage;
-        //doubleDamage.duration = 15f;
-        //doubleDamage.rarity = 1;
-        ////doubleDamage.startAction.AddListener();
-        ////doubleDamage.endAction.AddListener();
-        //this.powerups.Add(doubleDamage);
-
-        //// unlimitedAmmo
-        //Powerup unlimitedAmmo = new Powerup();
-        //unlimitedAmmo.type = PowerupType.unlimitedAmmo;
-        //unlimitedAmmo.duration = 15f;
-        //unlimitedAmmo.rarity = 1;
-        ////unlimitedAmmo.startAction.AddListener();
-        ////unlimitedAmmo.endAction.AddListener();
-        //this.powerups.Add(unlimitedAmmo);
-
-        //// visionRange
-        //Powerup visionRange = new Powerup();
-        //visionRange.type = PowerupType.visionRange;
-        //visionRange.duration = 5f;
-        //visionRange.rarity = 1;
-        ////visionRange.startAction.AddListener();
-        ////visionRange.endAction.AddListener();
-        //this.powerups.Add(visionRange);
-
-        //// healing
-        //Powerup healing = new Powerup();
-        //healing.type = PowerupType.healing;
-        //healing.duration = -1f;
-        //healing.rarity = 1;
-        ////healing.startAction.AddListener();
-        ////healing.endAction.AddListener();
-        //this.powerups.Add(healing);
-
-        //// endurance
-        //Powerup endurance = new Powerup();
-        //endurance.type = PowerupType.endurance;
-        //endurance.duration = 5f;
-        //endurance.rarity = 1;
-        ////endurance.startAction.AddListener();
-        ////endurance.endAction.AddListener();
-        //this.powerups.Add(endurance);
-=======
         Sprite mapUnveilSprite = Resources.Load<Sprite>("Sprites/Powerups/TmpSpritePowerup");
         this.powerupSprites.Add(mapUnveil.type, mapUnveilSprite);
 
@@ -382,6 +297,5 @@ public class PowerupController : MonoBehaviour
         endurance.startAction.AddListener(powerupActions.Endurance);
         endurance.endAction.AddListener(powerupActions.NormalEndurance);
         this.powerups.Add(endurance);
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
     }
 }

@@ -73,16 +73,12 @@ public class LightController : MonoBehaviour
         float size = Mathf.Lerp(this.minimumSize, this.maximumSize, health / maxHealth);
         lightSettings.setSize(size);
     }
-
-<<<<<<< HEAD
-=======
     public void setLightSizeMultiplier(float multiplier)
     {
         sizeMultiplier = multiplier;
         lightSettings.setSize(lightSettings.transform.localScale.x * sizeMultiplier);
     }
 
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
     public void EnableLight()
     {
         lightSettings.gameObject.SetActive(true);

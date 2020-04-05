@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PowerupActions
 {
-<<<<<<< HEAD
-    //void functions used in powerups
-=======
     RangedWeapon rangedWeapon = RangedWeapon.Instance;
     LightController lightController = LightController.Instance;
     Player player = Player.Instance;
@@ -16,7 +13,6 @@ public class PowerupActions
         ;
     }
 
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
     public void DisableFog()
     {
         Fog.Instance.DisableFog();
@@ -27,9 +23,6 @@ public class PowerupActions
         Fog.Instance.EnableFog();
         LightController.Instance.EnableLight();
     }
-<<<<<<< HEAD
-=======
-
     public void DoubleDamage()
     {
         rangedWeapon.damageMultiplier = 2f;
@@ -70,6 +63,4 @@ public class PowerupActions
     {
         player.damageReceivedMultiplier = 1f;
     }
-
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
 }

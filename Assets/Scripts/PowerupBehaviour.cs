@@ -21,10 +21,7 @@ public class PowerupBehaviour : MonoBehaviour
     private void ActivatePowerup()
     {
         controller.ActivatePowerup(powerup);
-<<<<<<< HEAD
-=======
         controller.powerupPickedup(this);
->>>>>>> 7b606d5707d0637e68f534bfe145b66570ca3874
     }
 
     public void SetPowerup(Powerup powerup)
