@@ -115,6 +115,8 @@ public class GameManager : MonoBehaviour
         isWaveActive = false;
         timeSinceWaveEnd = 0f;
         waveNumber++;
+        if (waveNumber >= waves.Count)
+            ShowGameOverScreen();
     }
 
     public static void confirmKill(string name, int points)

@@ -240,7 +240,7 @@ public class PowerupController : MonoBehaviour
         mapUnveil.endAction.AddListener(powerupActions.EnableFog);
         this.powerups.Add(mapUnveil);
 
-        Sprite mapUnveilSprite = Resources.Load<Sprite>("Sprites/Powerups/TmpSpritePowerup");
+        Sprite mapUnveilSprite = Resources.Load<Sprite>("Sprites/Powerups/mapUnveil");
         this.powerupSprites.Add(mapUnveil.type, mapUnveilSprite);
 
 
@@ -255,6 +255,9 @@ public class PowerupController : MonoBehaviour
         doubleDamage.endAction.AddListener(powerupActions.NormalDamage);
         this.powerups.Add(doubleDamage);
 
+        Sprite doubleDamageSprite = Resources.Load<Sprite>("Sprites/Powerups/doubleDamage");
+        this.powerupSprites.Add(doubleDamage.type, doubleDamageSprite);
+
         // unlimitedAmmo
         Powerup unlimitedAmmo = new Powerup();
         unlimitedAmmo.type = PowerupType.unlimitedAmmo;
@@ -265,6 +268,9 @@ public class PowerupController : MonoBehaviour
         unlimitedAmmo.startAction.AddListener(powerupActions.UnlimitedAmmo);
         unlimitedAmmo.endAction.AddListener(powerupActions.NormalAmmo);
         this.powerups.Add(unlimitedAmmo);
+
+        Sprite unlimitedAmmoSprite = Resources.Load<Sprite>("Sprites/Powerups/unlimitedAmmo");
+        this.powerupSprites.Add(unlimitedAmmo.type, unlimitedAmmoSprite);
 
         // visionRange
         Powerup visionRange = new Powerup();
@@ -277,6 +283,9 @@ public class PowerupController : MonoBehaviour
         visionRange.endAction.AddListener(powerupActions.VisionRangeNormal);
         this.powerups.Add(visionRange);
 
+        Sprite visionRangeSprite = Resources.Load<Sprite>("Sprites/Powerups/visionRange");
+        this.powerupSprites.Add(visionRange.type, visionRangeSprite);
+
         // healing
         Powerup healing = new Powerup();
         healing.type = PowerupType.healing;
@@ -288,6 +297,9 @@ public class PowerupController : MonoBehaviour
         healing.endAction.AddListener(powerupActions.EmptyFunc);
         this.powerups.Add(healing);
 
+        Sprite healingSprite = Resources.Load<Sprite>("Sprites/Powerups/healing");
+        this.powerupSprites.Add(healing.type, healingSprite);
+
         // endurance
         Powerup endurance = new Powerup();
         endurance.type = PowerupType.endurance;
@@ -298,5 +310,8 @@ public class PowerupController : MonoBehaviour
         endurance.startAction.AddListener(powerupActions.Endurance);
         endurance.endAction.AddListener(powerupActions.NormalEndurance);
         this.powerups.Add(endurance);
+
+        Sprite enduranceSprite = Resources.Load<Sprite>("Sprites/Powerups/shield");
+        this.powerupSprites.Add(endurance.type, enduranceSprite);
     }
 }
