@@ -15,7 +15,8 @@ public class Player : MonoBehaviour, IDamageable, IKillable
     public float damageReceivedMultiplier = 1f;
 
     private float timeToRegen = 0f;
-    
+
+    private string[] hurtSounds = new string[] { "hurt1", "hurt2", "hurt3", "hurt4" };
 
     private void Awake()
     {
@@ -47,7 +48,10 @@ public class Player : MonoBehaviour, IDamageable, IKillable
     private void changeHealth(float amount, bool isDamage)
     {
         if (isDamage)
+        {
             amount = -amount;
+            AudioManager.Instance.Play(hurtSounds[Random.Range(0, hurtSounds.Length)]);
+        }
         health = Mathf.Clamp(this.health + amount, 0f, maxHealth);
 
 
