@@ -120,24 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &9955001 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2070981978025973579, guid: 7fa749478ea423141a7e9da4aba333e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 278504895}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &9955002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9955001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f57b414de3e8e114aa1ae7510ae99db0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &278504895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -149,11 +131,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fog
-      objectReference: {fileID: 0}
-    - target: {fileID: 2070981978025973579, guid: 7fa749478ea423141a7e9da4aba333e8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2070981978025973578, guid: 7fa749478ea423141a7e9da4aba333e8,
         type: 3}
@@ -254,7 +231,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.6886792, g: 0.2891153, b: 0.2891153, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -369,11 +346,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1358789126717700964, guid: 4354ddee373d3824f9ec1d963ee9b23b,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4354ddee373d3824f9ec1d963ee9b23b, type: 3}
 --- !u!1001 &1387430186
@@ -387,11 +359,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LightThingy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8731881979796641488, guid: 340bc455b70b2e44b98bd67070294205,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8731881979796641489, guid: 340bc455b70b2e44b98bd67070294205,
         type: 3}
@@ -517,16 +484,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8200593734863624289, guid: 34f01af03aa24c04c85bc0244e4970a7,
-        type: 3}
-      propertyPath: spawnPoints.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200593734863624289, guid: 34f01af03aa24c04c85bc0244e4970a7,
-        type: 3}
-      propertyPath: spawnPoints.Array.data[0].x
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34f01af03aa24c04c85bc0244e4970a7, type: 3}
 --- !u!1001 &8767351213523654160
@@ -596,22 +553,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
-        type: 3}
-      propertyPath: waves.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
-        type: 3}
-      propertyPath: waves.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: eaa719852dbb8c24aa1b6502be6cad31,
-        type: 2}
-    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
-        type: 3}
-      propertyPath: waves.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: a0e0a178348747747b6a9091258e2679,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6, type: 3}

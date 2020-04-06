@@ -41,14 +41,24 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (start) //debug
+        if (waves.Count < 1)
         {
-            StartNextWave(); //debug
+            if(start)
+                Debug.LogError("No waves found");
             start = false;
             return;
         }
 
-        if (isWaveActive)
+        if (start) //debug - moze chcemy to jakos inaczej, ale na razie jest tak
+        {
+            start = false;
+            StartNextWave();
+            return;
+        }
+
+
+
+            if (isWaveActive)
         {
             List<WaveElement> enemiesToSpawn = waves[waveNumber].GetEnemiesToSpawn(Time.deltaTime);
             if (enemiesToSpawn == null)
@@ -101,19 +111,19 @@ public class GameManager : MonoBehaviour
         waveNumber++;
     }
 
-    public void addKill(string name, int points)
+    public static void confirmKill(string name, int points)
     {
-        if (enemiesKilled.ContainsKey(name))
-            enemiesKilled[name] += 1;
+        if (instance.enemiesKilled.ContainsKey(name))
+            instance.enemiesKilled[name] += 1;
         else
-            enemiesKilled.Add(name, 1);
+            instance.enemiesKilled.Add(name, 1);
 
-        if (pointsPerEnemy.ContainsKey(name))
-            pointsPerEnemy[name] += points;
+        if (instance.pointsPerEnemy.ContainsKey(name))
+            instance.pointsPerEnemy[name] += points;
         else
-            pointsPerEnemy.Add(name, points);
+            instance.pointsPerEnemy.Add(name, points);
 
-        pointsSum += points;
+        instance.pointsSum += points;
     }
 
 }

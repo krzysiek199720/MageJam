@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9154443220201714674}
   - component: {fileID: 9154443220201714670}
   - component: {fileID: 9154443220201714671}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy_1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -165,3 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 1
   stoppingDis: 1
+  enemyName: 
+  pointsPerKill: 0
+  maxHealth: 10
+  health: 0

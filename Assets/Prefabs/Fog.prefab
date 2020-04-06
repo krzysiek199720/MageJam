@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070981978025973578}
   - component: {fileID: 2070981978025972917}
+  - component: {fileID: 903242304437093274}
   m_Layer: 10
   m_Name: Fog
   m_TagString: Untagged
@@ -80,3 +81,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &903242304437093274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070981978025973579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57b414de3e8e114aa1ae7510ae99db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

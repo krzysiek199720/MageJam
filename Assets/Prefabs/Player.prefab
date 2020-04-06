@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 2.7
-  moveClickRadius: 1.5
+  moveClickRadius: 0.7
   weapon: {fileID: 0}
 --- !u!114 &569692554
 MonoBehaviour:

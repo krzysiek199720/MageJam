@@ -74,8 +74,9 @@ public class Projectile : MonoBehaviour
             Debug.LogError("Could not find IDamagable on enemy gameObject");
             return;
         }
+
+        enemy.Knockback(knockbackForce, ((Vector2)collision.transform.position - this.startPos).normalized);
         enemy.Damage(damage);
-        enemy.Knockback(knockbackForce, (collision.transform.position - this.transform.position).normalized);
 
         if (--enemiesToPierce == 0)
         {
