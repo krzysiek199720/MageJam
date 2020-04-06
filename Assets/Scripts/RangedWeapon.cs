@@ -111,6 +111,7 @@ public class RangedWeapon : Weapon
         }
 
         useBullet();
+        AudioManager.Instance.Play("shotgun_echo");
         if (this.magazineSize < 1)
             startReload();
 
@@ -128,6 +129,8 @@ public class RangedWeapon : Weapon
         this.currentReloadTime = this.reloadTime;
         //reload anim
         animator.SetBool("isReloading", true);
+        //audio
+        AudioManager.Instance.Play("shotgun_fullload");
     }
 
     private void reload()

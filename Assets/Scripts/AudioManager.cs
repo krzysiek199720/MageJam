@@ -28,7 +28,13 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
         }    
+    }
+
+    private void Start()
+    {
+        this.Play("DarkLightTheme");
     }
 
     public void Play(string name)

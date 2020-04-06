@@ -95,6 +95,7 @@ public class PowerupController : MonoBehaviour
         }
 
         keys = new List<PowerupType>(activePowerups.Keys);
+        AudioManager.Instance.Play("powerup_get");
     }
 
     public void ClearActivePowerups()
@@ -135,6 +136,7 @@ public class PowerupController : MonoBehaviour
         powerupCount++;
 
         lastPowerupSpawn = 0f;
+        AudioManager.Instance.Play("powerup_spawn");
 
         return powerupGameObject;
     }

@@ -43,4 +43,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a065eb27418f1941a154e3086c1db1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: DarkLightTheme
+    loop: 1
+    clip: {fileID: 8300000, guid: a080d1f6e23bca445807fe4ea52b2ffe, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: powerup_get
+    loop: 0
+    clip: {fileID: 8300000, guid: e3232018b8ec9f94aa6bac3a5952de21, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: powerup_spawn
+    loop: 0
+    clip: {fileID: 8300000, guid: bd57480d26e8ad84985044da59b34823, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: shotgun_fullload
+    loop: 0
+    clip: {fileID: 8300000, guid: a8fdd9298ac69dd45bdb2773b8535e65, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: shotgun_echo
+    loop: 0
+    clip: {fileID: 8300000, guid: 7f01198059601584dae442bd8b4fa8ce, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: splash
+    loop: 0
+    clip: {fileID: 8300000, guid: 1229e5d566668b946ac0aa425fbb45f2, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
