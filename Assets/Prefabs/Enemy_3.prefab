@@ -95,7 +95,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 6461064128726252583}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -167,5 +167,6 @@ MonoBehaviour:
   stoppingDis: 1
   enemyName: 
   pointsPerKill: 0
-  maxHealth: 10
-  health: 0
+  maxHealth: 3
+  damage: 1
+  damageInterval: 1

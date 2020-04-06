@@ -111,11 +111,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fog
       objectReference: {fileID: 0}
-    - target: {fileID: 2070981978025973579, guid: 7fa749478ea423141a7e9da4aba333e8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2070981978025973578, guid: 7fa749478ea423141a7e9da4aba333e8,
         type: 3}
       propertyPath: m_LocalPosition.x

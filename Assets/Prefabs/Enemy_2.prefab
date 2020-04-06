@@ -95,7 +95,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 6461064128726252583}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -163,9 +163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34324f92f6adfa4daf560d9734bfd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 1
+  enemySpeed: 2.3
   stoppingDis: 1
   enemyName: 
   pointsPerKill: 0
-  maxHealth: 10
-  health: 0
+  maxHealth: 2
+  damage: 1
+  damageInterval: 1

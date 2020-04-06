@@ -15,9 +15,15 @@ public class Enemy : MonoBehaviour, IDamageable, IKillable
     public float maxHealth = 10f;
     private float health;
 
+    public float damage = 1f;
+    public float damageInterval = 1f;
+    private float currentDamageInterval = 0f;
+
     private Animator anim;
     private Transform target;
     private Rigidbody2D rigidbody2d;
+    private List<Collider2D> colliders = new List<Collider2D>();
+    private Collider2D playerCollider;
 
     private Vector2 pushForce;
 
@@ -27,12 +33,16 @@ public class Enemy : MonoBehaviour, IDamageable, IKillable
         pushForce = Vector2.zero;
         anim = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
+        target = playerGO.GetComponent<Transform>();
+        playerCollider = playerGO.GetComponent<Collider2D>();
+        rigidbody2d.GetAttachedColliders(colliders);
     }
 
-    // Update is called once per frame
+    // Update is called once per physics tick
     void FixedUpdate()
     {
+        currentDamageInterval += Time.fixedDeltaTime;
         //Debug.Log(pushForce);
         transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + pushForce, Time.fixedDeltaTime);
         pushForce /= 2f;
@@ -54,6 +64,20 @@ public class Enemy : MonoBehaviour, IDamageable, IKillable
         else if (target.position.x < transform.position.x)
             transform.localScale = new Vector3(-1, 1, 1);
 
+
+        //do collisions
+
+        foreach(Collider2D col in this.colliders)
+        {
+            if (col.IsTouching(playerCollider))
+            {
+                if (this.damageInterval < this.currentDamageInterval)
+                {
+                    Player.Instance.Damage(this.damage);
+                    currentDamageInterval = 0f;
+                }
+            }
+        }
     }
 
     public void Damage(float damage)
@@ -77,7 +101,6 @@ public class Enemy : MonoBehaviour, IDamageable, IKillable
 
     public void Knockback(float force, Vector2 direction)
     {
-        Debug.Log("now");
         this.pushForce = direction * force;
         Debug.Log(direction * force);
         Debug.Log(this.pushForce);

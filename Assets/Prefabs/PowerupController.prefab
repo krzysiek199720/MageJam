@@ -45,5 +45,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerupPrefab: {fileID: 3406107542359233573, guid: 2a6f94ddb230cf74bb48c0b7af4aa49b,
     type: 3}
-  spawnPoints: []
+  spawnPoints:
+  - {x: -10, y: -2.9, z: 0}
+  - {x: -11.1, y: -3.82, z: 0}
+  - {x: 0.82, y: 1.77, z: 0}
+  - {x: 9.35, y: 2.18, z: 0}
+  - {x: 6, y: -2.69, z: 0}
+  - {x: -1.08, y: -4.1, z: 0}
   powerups: []
+  maxPowerupsOnMap: 5
+  powerupSpawnInterval: 10
+  powerupsOnMap: []

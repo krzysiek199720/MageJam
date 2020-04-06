@@ -43,3 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067b1e1245a813b48bff115dbad74827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waves:
+  - {fileID: 11400000, guid: 1fae46e046433024f820e25deef7d5c2, type: 2}
+  - {fileID: 11400000, guid: eaa719852dbb8c24aa1b6502be6cad31, type: 2}
+  - {fileID: 11400000, guid: a0e0a178348747747b6a9091258e2679, type: 2}
+  - {fileID: 11400000, guid: feef70083d157f34f8551c58a0ae9181, type: 2}
+  - {fileID: 11400000, guid: 3e3cdd5adcaf33849b840fec01906d83, type: 2}
+  - {fileID: 11400000, guid: 133ebd6122d7ea345a85a2928411e67f, type: 2}
+  timeBetweenWaves: 10

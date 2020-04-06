@@ -10,16 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84a527b40394374469fde6b7e574d5c4, type: 3}
-  m_Name: Wave_2
+  m_Name: wave_2
   m_EditorClassIdentifier: 
   enemies:
   - name: magik
-    count: 1
-    spawnInterval: 5
+    count: 20
+    spawnInterval: 3
     timeSinceSpawn: 0
-    spawned: 0
-    pointsPerKill: 2
+    spawned: 20
+    pointsPerKill: 10
     prefab: {fileID: 9154443220201714673, guid: 67f948fd63d3b174bb759817903333c2,
       type: 3}
+  - name: magik
+    count: 7
+    spawnInterval: 8
+    timeSinceSpawn: 0
+    spawned: 7
+    pointsPerKill: 15
+    prefab: {fileID: 6461064128726252583, guid: 58a9289b4e54bf245a4645d3811e0e3a,
+      type: 3}
   spawnPoints:
-  - {x: 0, y: -1, z: 0}
+  - {x: -12.73, y: 5.61, z: 0}
+  - {x: -0.05, y: 5.43, z: 0}
+  - {x: 12.36, y: 5.34, z: 0}
+  - {x: 12.77, y: -0.71, z: 0}
+  - {x: 12.68, y: -4.86, z: 0}
+  - {x: -0.14, y: -6.08, z: 0}
+  - {x: -12.46, y: -6.53, z: 0}
+  - {x: -13.41, y: -0.62, z: 0}
