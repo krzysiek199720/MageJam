@@ -10,11 +10,6 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] sounds;
 
-    private void Start()
-    {
-        Play("Start");
-    }
-
     private void Awake()
     {
         // if the singleton hasn't been initialized yet
