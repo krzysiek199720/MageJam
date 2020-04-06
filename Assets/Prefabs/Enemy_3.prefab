@@ -167,6 +167,6 @@ MonoBehaviour:
   stoppingDis: 1
   enemyName: 
   pointsPerKill: 0
-  maxHealth: 10
+  maxHealth: 3
   damage: 1
   damageInterval: 1
