@@ -40,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320962985}
-  m_Mesh: {fileID: -462981019419857548, guid: 89c286574ca0a584b8cd5ab884836c72, type: 3}
+  m_Mesh: {fileID: -462981019419857548, guid: 0a9344452c0d7db4ebce554e5194eb0a, type: 3}
 --- !u!23 &1320962988
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -187,6 +187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 5
   inertiaTime: 0.2
-  minimumSize: 2
-  maximumSize: 4
+  minimumSize: 200
+  maximumSize: 350
   sizeMultiplier: 1
