@@ -15,10 +15,7 @@ public class Player : MonoBehaviour, IDamageable, IKillable
     public float damageReceivedMultiplier = 1f;
 
     private float timeToRegen = 0f;
-
-    //DEBUG STUFF
-    private bool hurt = true;
-    //DEBUG STUFF END
+    
 
     private void Awake()
     {
@@ -44,26 +41,19 @@ public class Player : MonoBehaviour, IDamageable, IKillable
             changeHealth(healthRegen, false);
         }
 
-        //DEBUG STUFF
-        if (hurt)
-        {
-            if (this.health < 1f)
-                hurt = false;
-            else
-                changeHealth(0.1f, true);
-        }
-        else
-            if (this.health == this.maxHealth)
-                hurt = true;
         
-        //DEBUG STUFF END
     }
 
     private void changeHealth(float amount, bool isDamage)
     {
         if (isDamage)
             amount = -amount;
-        health = Mathf.Min(this.health + amount, maxHealth);
+        health = Mathf.Clamp(this.health + amount, 0f, maxHealth);
+
+
+        // if killed
+        if (this.health <= 0f)
+            Kill();
 
         // Update health UI
         // Update light
@@ -77,12 +67,11 @@ public class Player : MonoBehaviour, IDamageable, IKillable
 
     public void Damage(float damage)
     {
+        Debug.Log("Player damage");
+        Debug.Log(this.health + "/" + this.maxHealth);
         damage = Mathf.Abs(damage * damageReceivedMultiplier);
-        changeHealth(Mathf.Max(this.health - damage, 0f), true);
-                
-        // if killed
-        if (this.health <= 0f)
-            Kill();
+        changeHealth(damage, true);
+
     }
 
     public void Knockback(float force, Vector2 direction)
