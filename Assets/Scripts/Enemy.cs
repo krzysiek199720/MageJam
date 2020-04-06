@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour, IDamageable, IKillable
     public int pointsPerKill;
 
     public float maxHealth = 10f;
-    public float health;
+    private float health;
 
     private Animator anim;
     private Transform target;
