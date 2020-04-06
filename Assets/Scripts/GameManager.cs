@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public Dictionary<string, int> pointsPerEnemy = new Dictionary<string, int>();
     public int pointsSum { get; private set; }
 
+    public Text wavesTextUI;
+
     private void Awake()
     {
         // if the singleton hasn't been initialized yet
@@ -83,6 +85,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void SetWavesUI()
+    {
+        wavesTextUI.text = (waveNumber + 1) + " / " + waves.Count;
+    }
+
     public void SpawnEnemies(List<WaveElement> enemies)
     {
         foreach(WaveElement we in enemies)
@@ -105,6 +112,7 @@ public class GameManager : MonoBehaviour
         if (isWaveActive)
             return;
         isWaveActive = true;
+        SetWavesUI();
     }
 
     public void EndWave()
@@ -115,6 +123,7 @@ public class GameManager : MonoBehaviour
         isWaveActive = false;
         timeSinceWaveEnd = 0f;
         waveNumber++;
+        SetWavesUI();
         if (waveNumber >= waves.Count)
             ShowGameOverScreen();
     }
@@ -137,6 +146,7 @@ public class GameManager : MonoBehaviour
     public void ShowGameOverScreen()
     {
         CanvasGroup canvasGroup = gameOverScreen.GetComponent<CanvasGroup>();
+        wavesTextUI.text = "";
 
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
