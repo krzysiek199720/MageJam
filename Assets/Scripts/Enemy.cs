@@ -95,6 +95,7 @@ public class Enemy : MonoBehaviour, IDamageable, IKillable
         this.gameObject.SetActive(false);
         //Animacja
         // Dzwiek
+        AudioManager.Instance.Play("splash");
         // Destroy
         Destroy(this.gameObject);
     }

@@ -162,10 +162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34324f92f6adfa4daf560d9734bfd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 1
+  enemySpeed: 2
   stoppingDis: 1
   enemyName: 
   pointsPerKill: 0
-  maxHealth: 3
+  maxHealth: 6
   damage: 1
   damageInterval: 1

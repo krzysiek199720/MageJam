@@ -56,7 +56,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        Debug.Log("xxxxx");
         if (((1 << collision.gameObject.layer) & enemyLayer) == 0)
         {
             //This is not enemy collider

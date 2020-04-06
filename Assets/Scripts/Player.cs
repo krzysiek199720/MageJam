@@ -67,11 +67,8 @@ public class Player : MonoBehaviour, IDamageable, IKillable
 
     public void Damage(float damage)
     {
-        Debug.Log("Player damage");
-        Debug.Log(this.health + "/" + this.maxHealth);
         damage = Mathf.Abs(damage * damageReceivedMultiplier);
         changeHealth(damage, true);
-
     }
 
     public void Knockback(float force, Vector2 direction)

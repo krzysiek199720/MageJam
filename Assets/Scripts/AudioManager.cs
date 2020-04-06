@@ -5,7 +5,9 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance;
+    private static AudioManager instance = null;
+    public static AudioManager Instance { get { return instance; } }
+
     public Sound[] sounds;
 
     private void Start()
@@ -15,7 +17,14 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = GetComponent<AudioManager>();
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
+
 
         foreach (Sound s in sounds)
         {
@@ -24,7 +33,13 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
         }    
+    }
+
+    private void Start()
+    {
+        this.Play("DarkLightTheme");
     }
 
     public void Play(string name)

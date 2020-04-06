@@ -58,7 +58,13 @@ public class LightController : MonoBehaviour
         }
         else
             this.currentInertiaTime = 0f;
-        
+
+        if (move.x.Equals(0))
+            ;
+        else if(move.x < 0)
+            this.transform.localScale = new Vector3(-1, 1, 1);
+        else
+            this.transform.localScale = new Vector3(1, 1, 1);
 
         moveDir = move.normalized;
     }
