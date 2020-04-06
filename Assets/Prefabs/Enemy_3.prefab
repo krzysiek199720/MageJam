@@ -167,5 +167,5 @@ MonoBehaviour:
   stoppingDis: 1
   enemyName: 
   pointsPerKill: 0
-  maxHealth: 10
-  health: 0
+  maxHealth: 3
+  health: 2

@@ -14,12 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - name: magik
-    count: 2
-    spawnInterval: 5
-    timeSinceSpawn: 5.0424924
-    spawned: 0
-    pointsPerKill: 2
+    count: 20
+    spawnInterval: 1.7
+    timeSinceSpawn: 0
+    spawned: 20
+    pointsPerKill: 10
     prefab: {fileID: 9154443220201714673, guid: 67f948fd63d3b174bb759817903333c2,
       type: 3}
   spawnPoints:
-  - {x: 0, y: 1, z: 0}
+  - {x: -12.73, y: 5.61, z: 0}
+  - {x: -0.05, y: 5.43, z: 0}
+  - {x: 12.36, y: 5.34, z: 0}
+  - {x: 12.77, y: -0.71, z: 0}
+  - {x: 12.68, y: -4.86, z: 0}
+  - {x: -0.14, y: -6.08, z: 0}
+  - {x: -12.46, y: -6.53, z: 0}
+  - {x: -13.41, y: -0.62, z: 0}
