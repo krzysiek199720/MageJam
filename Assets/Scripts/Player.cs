@@ -78,6 +78,7 @@ public class Player : MonoBehaviour, IDamageable, IKillable
 
     public void Kill()
     {
+        GameManager.Instance.ShowGameOverScreen();
         Debug.Log("You've been killed");
         // Do stuff
     }
