@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] sounds;
 
+    public bool stop = false;
+
     private void Awake()
     {
         // if the singleton hasn't been initialized yet
@@ -35,10 +37,13 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         this.Play("DarkLightTheme");
+        this.Play("ambient");
     }
 
     public void Play(string name)
     {
+        if (stop)
+            return;
         Sound s = Array.Find(sounds, sound => sound.name == name);
 
         if (!IsSound || s == null)

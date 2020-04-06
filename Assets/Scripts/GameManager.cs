@@ -147,6 +147,7 @@ public class GameManager : MonoBehaviour
     {
         CanvasGroup canvasGroup = gameOverScreen.GetComponent<CanvasGroup>();
         wavesTextUI.text = "";
+        AudioManager.Instance.stop = true;
 
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
