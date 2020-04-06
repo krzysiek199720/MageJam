@@ -8,6 +8,11 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     public Sound[] sounds;
 
+    private void Start()
+    {
+        Play("Start");
+    }
+
     private void Awake()
     {
         instance = GetComponent<AudioManager>();

@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance = null;
     public static GameManager Instance { get { return instance; } }
+
+    public Text wavesText;
+    public Text pointsText;
+    public GameObject gameOverScreen;
 
     [SerializeField]
     public List<Wave> waves;
@@ -126,4 +132,20 @@ public class GameManager : MonoBehaviour
         instance.pointsSum += points;
     }
 
+    public void ShowGameOverScreen()
+    {
+        CanvasGroup canvasGroup = gameOverScreen.GetComponent<CanvasGroup>();
+
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+        canvasGroup.alpha = 1;
+
+        wavesText.text = waveNumber.ToString();
+        pointsText.text = pointsSum.ToString();
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

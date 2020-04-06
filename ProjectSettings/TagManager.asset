@@ -20,7 +20,7 @@ TagManager:
   - BehindMask
   - Black
   - Enemy
-  - 
+  - Player
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 4083989103
     locked: 0
