@@ -48,9 +48,12 @@ public class RangedWeapon : Weapon
     // maybe well have a list of upgrades or something?
     public float cooldownLeft {get; protected set; }
 
+    private AmmoUI ammoUI;
+
     void Start()
     {
         animator = GetComponentInParent<Animator>();
+        ammoUI = GetComponent<AmmoUI>();
 
         if (projectilePrefab == null)
         {
@@ -144,6 +147,7 @@ public class RangedWeapon : Weapon
     private void updateBulletUI()
     {
         //change UI
+        ammoUI.setAmmoUI(this.magazineSize);
         // animations?
 
     }
