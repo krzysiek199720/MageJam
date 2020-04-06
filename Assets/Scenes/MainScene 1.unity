@@ -1490,6 +1490,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
+        type: 3}
+      propertyPath: wavesText
+      value: 
+      objectReference: {fileID: 1982422481}
+    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
+        type: 3}
+      propertyPath: pointsText
+      value: 
+      objectReference: {fileID: 249982083}
+    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
+        type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 1939083953}
     - target: {fileID: 5028434203481383640, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1545,20 +1560,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
-        type: 3}
-      propertyPath: wavesText
-      value: 
-      objectReference: {fileID: 1982422481}
-    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
-        type: 3}
-      propertyPath: pointsText
-      value: 
-      objectReference: {fileID: 249982083}
-    - target: {fileID: 884426501569667110, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6,
-        type: 3}
-      propertyPath: gameOverScreen
-      value: 
-      objectReference: {fileID: 1939083953}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a7fa9adf9ae01148adde8fe3eb59ce6, type: 3}

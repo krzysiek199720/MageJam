@@ -16,6 +16,8 @@ public class PlayerMoveController : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     public RangedWeapon weapon;
     private Animator anim;
+
+    public bool isDead = false;
     private void Awake()
     {
         // if the singleton hasn't been initialized yet
@@ -88,9 +90,12 @@ public class PlayerMoveController : MonoBehaviour
 
     private void Flip()
     {
-        facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        if (isDead == false)
+        {
+            facingRight = !facingRight;
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+        }
     }
 }

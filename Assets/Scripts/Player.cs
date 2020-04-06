@@ -78,7 +78,10 @@ public class Player : MonoBehaviour, IDamageable, IKillable
 
     public void Kill()
     {
+        Animator anim = GetComponent<Animator>();
+        PlayerMoveController.Instance.isDead = true;
         GameManager.Instance.ShowGameOverScreen();
+        anim.Play("player_death");
         Debug.Log("You've been killed");
         // Do stuff
     }
